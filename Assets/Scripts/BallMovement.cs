@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 public class BallMovement : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class BallMovement : MonoBehaviour
     public FloorSpawner floorSpawner;
     public static bool isFall;
     public float speedToAdd;
+    public TextMeshProUGUI gameOverText;
 
 
     // Start is called before the first frame update
@@ -24,11 +27,18 @@ public class BallMovement : MonoBehaviour
         if(transform.position.y <= 0.5f)
         {
             isFall = true;
+            
         }
 
         if (isFall)
         {
+            gameOverText.text = "Game Over!" + Environment.NewLine + "Your Score: " + ScoreManager.score;
+            gameOverText.enabled = true;
             return;
+        }
+        else
+        {
+            gameOverText.enabled = false;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -59,6 +69,17 @@ public class BallMovement : MonoBehaviour
             ScoreManager.score++;
             floorSpawner.SpawnFloor();
             StartCoroutine(DeleteFloor(other.gameObject));
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "food")
+        {
+            Debug.Log("food");
+            Destroy(other.gameObject);
+            ScoreManager.score += 3;
         }
     }
 
