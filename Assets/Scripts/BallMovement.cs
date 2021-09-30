@@ -7,20 +7,21 @@ using UnityEngine.UI;
 
 public class BallMovement : MonoBehaviour
 {
-    Vector3 direction = Vector3.forward;
-    public float speed;
     public FloorSpawner floorSpawner;
+    public Animator animator;
+
     public static bool isFall;
+    public float speed;    
     public float speedToAdd;
+
     public TextMeshProUGUI gameOverText;
     public GameObject playAgainButton;
     public GameObject mainMenuButton;
     public GameObject quitButton;
 
-    public Animator animator;
-
     private ScoreManager scoreManager;
 
+    Vector3 direction = Vector3.forward;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,7 @@ public class BallMovement : MonoBehaviour
             speed += speedToAdd * Time.deltaTime;
         }
 
+        //this part is for mouse clicks only left and forward/disabled
         //if (Input.GetMouseButtonDown(0))
         //{
         //    if (direction.x == 0)

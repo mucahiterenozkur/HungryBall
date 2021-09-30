@@ -6,9 +6,12 @@ public class FloorSpawner : MonoBehaviour
 {
     public GameObject lastFloor;
     public List<GameObject> collectibles = new List<GameObject>();
+
     private Vector3 upVector = new Vector3(0, 0.6f, 0);
-    GameObject food;
+
     Vector3 direction = Vector3.forward;
+    GameObject food;
+    
 
     private void Awake()
     {
