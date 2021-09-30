@@ -1,7 +1,9 @@
 # HungryBall
 I bet you can't do more than 1000 points! Hungry Ball wants to eat most of the foods on his own way. Be careful, some foods are just a bait to distract your attention. Every block you pass is 1 point and every food you  eat is 3 point. You will notice but I wanted to warn you that the ball is gonna speed up. Be fast with your fingers.<br><br>
 Hungry Ball is a 3D game which made with Unity. Animations, sound effects, customized sprites, 3D arts and creativity is used. <br><br>
-Good luck, have fun! <br><br>
+Good luck, have fun! <br>
+
+<strong>If you want to support me on itch.io --> https://mucahiterenozkur.itch.io/hungry-ball  </strong><br><br>
 
 <strong> Gameplay </strong> <br><br>
 ![gif1](https://user-images.githubusercontent.com/59232592/135514888-7c2def33-2532-49b4-a8cc-f7abbe0014bf.gif)
