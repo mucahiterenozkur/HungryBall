@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 204048119}
   - component: {fileID: 204048118}
   - component: {fileID: 204048122}
+  - component: {fileID: 204048123}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -240,6 +241,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ba8249a8c420e478a23c87dce92ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &204048123
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204048117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9acf7eb1806a7e42ada2a87699e7641, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &286756903
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +393,7 @@ MonoBehaviour:
   playAgainButton: {fileID: 1907761542}
   mainMenuButton: {fileID: 1760593589}
   quitButton: {fileID: 386263513}
+  animator: {fileID: 204048123}
 --- !u!1 &360811306
 GameObject:
   m_ObjectHideFlags: 0

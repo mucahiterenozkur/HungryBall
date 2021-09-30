@@ -17,12 +17,17 @@ public class BallMovement : MonoBehaviour
     public GameObject mainMenuButton;
     public GameObject quitButton;
 
+    public Animator animator;
+
+    private ScoreManager scoreManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
         isFall = false;
-        direction = Vector3.forward;    
+        direction = Vector3.forward;
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -36,6 +41,8 @@ public class BallMovement : MonoBehaviour
 
         if (isFall)
         {
+            animator.SetBool("isGameOver", true);
+            scoreManager.scoreText.enabled = false;
             gameOverText.text = "Game Over!" + Environment.NewLine + "Your Score: " + ScoreManager.score;
             gameOverText.enabled = true;
             playAgainButton.SetActive(true);
@@ -45,6 +52,8 @@ public class BallMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isGameOver", false);
+            scoreManager.scoreText.enabled = true;
             gameOverText.enabled = false;
             playAgainButton.SetActive(false);
             mainMenuButton.SetActive(false);
